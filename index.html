@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brand Landing Page</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* Root color variables */
+    :root {
+      --primary-color: #5c7cfa;
+      --secondary-color: #64748b;
+      --accent-color: #22d3ee;
+      --bg-light: #f9fafb;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-light);
+      color: #343a40;
+      scroll-behavior: smooth;
+    }
+    /* Hero styles */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: white;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      margin: 1rem auto 2rem;
+      max-width: 600px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+    .btn-cta {
+      background-color: white;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(92, 124, 250, 0.4);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn-cta:hover {
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Features section */
+    .features {
+      padding: 4rem 1rem;
+      background-color: white;
+      text-align: center;
+    }
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .feature-desc {
+      color: var(--secondary-color);
+      font-size: 1rem;
+    }
+
+    /* Product showcase */
+    .product-showcase {
+      padding: 4rem 1rem;
+      background-color: var(--bg-light);
+    }
+    .product-img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .product-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 4rem 1rem;
+      background: white;
+      text-align: center;
+    }
+    .testimonial-card {
+      background-color: #f1f5f9;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin: 1rem;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #212529;
+      color: #adb5bd;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 4.5rem;
+      }
+      .feature-icon {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header class="hero d-flex flex-column justify-content-center align-items-center">
+    <h1 class="fade-in">Elevate Your Experience</h1>
+    <p class="fade-in" style="transition-delay: 0.2s;">
+      Discover the ultimate product for your lifestyle. Innovative, reliable, and crafted for excellence.
+    </p>
+    <a href="#cta" class="btn btn-cta fade-in" style="transition-delay: 0.4s;">Get Started</a>
+  </header>
+
+  <!-- Features -->
+  <section class="features container" id="features">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-icon mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-speedometer2" viewBox="0 0 16 16" width="48" height="48"><path d="M8 4a.5.5 0 0 1 .5.5v5.793l3.146 3.147a.5.5 0 0 1-.708.707l-3.147-3.146V4.5A.5.5 0 0 1 8 4z"/><path fill-rule="evenodd" d="M6.664 10.408a.5.5 0 0 0-.494-.408h-.332c-.287 0-.84.418-1.312.91C3.318 12.368 2 14 2 14h11s-1.318-1.632-2.526-2.418c-.472-.492-1.025-.91-1.312-.91h-.331a.5.5 0 0 0-.492.408l-.513 2.046a.5.5 0 0 1-.98 0l-.514-2.046z"/><path fill-rule="evenodd" d="M8 1a7 7 0 0 0-6.982 7.837.5.5 0 1 0 .996-.07A6 6 0 1 1 14 8a.5.5 0 0 0 1 0 7 7 0 0 0-7-7z"/></svg>
+        </div>
+        <h3 class="feature-title">Fast Performance</h3>
+        <p class="feature-desc">Optimized speed ensures the best user experience with zero lag.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-icon mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16" width="48" height="48"><path d="M5.5 9a1.5 1.5 0 0 1 3 0v1h-3V9z"/><path d="M8 0c-.69 0-1.376.041-2.055.114a6.717 6.717 0 0 0-3.351 1.2c-.314.21-.652.404-1.013.575a.5.5 0 0 0-.251.438v6.999c0 2.12.613 3.785 1.832 4.884 1.22 1.101 2.933 1.564 5.112 1.562 2.178.001 3.89-.459 5.109-1.56 1.218-1.1 1.83-2.763 1.83-4.883v-7a.5.5 0 0 0-.253-.436 12.297 12.297 0 0 0-1.02-.59 6.738 6.738 0 0 0-3.353-1.203A13.1 13.1 0 0 0 8 0z"/></svg>
+        </div>
+        <h3 class="feature-title">Secure & Reliable</h3>
+        <p class="feature-desc">Built with top-tier security features ensuring data safety and privacy.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-icon mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16" width="48" height="48"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zm-3 13a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/></svg>
+        </div>
+        <h3 class="feature-title">Mobile Friendly</h3>
+        <p class="feature-desc">Designed responsively to work flawlessly on all devices and screen sizes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="product-showcase container" id="product">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <img
+          src="https://images.unsplash.com/photo-1602524815777-22cb21a9da8b?auto=format&fit=crop&w=800&q=80"
+          alt="Product Image"
+          class="product-img"
+          loading="lazy"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">Revolutionary Design Meets Cutting-edge Technology</h2>
+        <p class="mb-4">
+          Crafted with precision and care, our product combines sleek aesthetics with robust functionalities that empower your daily life.
+        </p>
+        <a href="#cta" class="btn btn-primary btn-lg">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials container" id="testimonials">
+    <h2 class="mb-5">What Our Customers Say</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 testimonial-card fade-in" style="transition-delay: 0.1s;">
+        <p class="testimonial-text">
+          "This product transformed the way I work. Exceptional quality and support!"
+        </p>
+        <p class="testimonial-author">- Emily R.</p>
+      </div>
+      <div class="col-md-4 testimonial-card fade-in" style="transition-delay: 0.3s;">
+        <p class="testimonial-text">
+          "A must-have for anyone looking for reliability and modern design."
+        </p>
+        <p class="testimonial-author">- Jason M.</p>
+      </div>
+      <div class="col-md-4 testimonial-card fade-in" style="transition-delay: 0.5s;">
+        <p class="testimonial-text">
+          "Impressive performance and beautiful aesthetics. Highly recommend!"
+        </p>
+        <p class="testimonial-author">- Sandra K.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <h2>Ready to Elevate Your Life?</h2>
+    <p>Join thousands of satisfied customers and get started with our product today.</p>
+    <a href="#" class="btn btn-lg btn-light fw-bold">Order Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 BrandName. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Contact Us</a>
+    </p>
+    <p>
+      Follow us:
+      <a href="#" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Animate fade-in elements on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in');
+
+      const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -100px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add('visible');
+            appearOnScroll.unobserve(entry.target);
+          }
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+</body>
+</html>
+
